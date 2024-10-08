@@ -99,3 +99,15 @@ PARAM_DEFINE_FLOAT(BAT_EMERGEN_THR, 0.05f);
  * @increment 0.1
  */
 PARAM_DEFINE_FLOAT(BAT_AVRG_CURRENT, 15.0f);
+
+
+/**
+ * Battery override hack
+ *
+ * This determines if moving the left stick to the lower right
+ * arms and to the lower left disarms the vehicle.
+ *
+ * @boolean
+ * @group Battery Calibration
+ */
+PARAM_DEFINE_INT32(BAT_OVRD_CONN, 0);

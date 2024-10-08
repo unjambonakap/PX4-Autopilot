@@ -402,7 +402,8 @@ private:
 	DEFINE_PARAMETERS(
 		(ParamFloat<px4::params::BAT_CRIT_THR>)     _param_bat_crit_thr,
 		(ParamFloat<px4::params::BAT_EMERGEN_THR>)  _param_bat_emergen_thr,
-		(ParamFloat<px4::params::BAT_LOW_THR>)      _param_bat_low_thr
+		(ParamFloat<px4::params::BAT_LOW_THR>)      _param_bat_low_thr,
+		(ParamBool<px4::params::BAT_OVRD_CONN>)      _param_ovrd_conn
 	);
 
 	// Disallow copy construction and move assignment.

@@ -1753,6 +1753,9 @@ MavlinkReceiver::handle_message_battery_status(mavlink_message_t *msg)
 	battery_status.cell_count = cell_count;
 	battery_status.temperature = (float)battery_mavlink.temperature;
 	battery_status.connected = true;
+	if (_param_ovrd_conn.get()) {
+		battery_status.connected = !(battery_status.cell_count == 9 && std::abs(battery_status.voltage_v) < FLT_EPSILON);
+	}
 
 	// Set the battery warning based on remaining charge.
 	//  Note: Smallest values must come first in evaluation.
